@@ -32,9 +32,6 @@
 							"projects/shell/src/styles.scss"
 						],
 						"scripts": [],
-						"ssr": {
-							"entry": "projects/shell/server.ts"
-						},
 						"main": "projects/shell/src/main.ts",
 						"extraWebpackConfig": "projects/shell/webpack.config.js",
 						"commonChunk": false
@@ -139,9 +136,6 @@
 							"projects/portfolio/src/styles.scss"
 						],
 						"scripts": [],
-						"ssr": {
-							"entry": "projects/portfolio/server.ts"
-						},
 						"main": "projects/portfolio/src/main.ts",
 						"extraWebpackConfig": "projects/portfolio/webpack.config.js",
 						"commonChunk": false
@@ -246,9 +240,6 @@
 							"projects/products/src/styles.scss"
 						],
 						"scripts": [],
-						"ssr": {
-							"entry": "projects/products/server.ts"
-						},
 						"main": "projects/products/src/main.ts",
 						"extraWebpackConfig": "projects/products/webpack.config.js",
 						"commonChunk": false

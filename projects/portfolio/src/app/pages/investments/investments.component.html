@@ -1,0 +1,9 @@
+<section class="investments">
+  <h1>📊 Meus Investimentos</h1>
+
+  <div class="card" *ngFor="let investment of investments">
+    <strong>{{ investment.name }}</strong>
+    <span>{{ investment.type }}</span>
+    <p>R$ {{ investment.value }}</p>
+  </div>
+</section>
