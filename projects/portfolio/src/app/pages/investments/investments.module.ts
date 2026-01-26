@@ -8,10 +8,7 @@ import { InvestmentsComponent } from './investments.component';
   imports: [
     CommonModule,
     RouterModule.forChild([
-      {
-        path: '',
-        component: InvestmentsComponent,
-      },
+      { path: '', component: InvestmentsComponent },
     ]),
   ],
 })
