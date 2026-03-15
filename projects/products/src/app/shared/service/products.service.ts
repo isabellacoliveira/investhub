@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { catchError, Observable, of, retry } from 'rxjs';
 
 export interface Product {
   name: string;
@@ -26,6 +26,9 @@ export class ProductsService {
         description: 'Crédito rápido e online',
         active: false,
       },
-    ]);
+    ]).pipe(
+      retry(3),
+      catchError(() => of([{ name: 'Fallback Product', description: 'Serviço temporariamente indisponível', active: false }]))
+    );
   }
 }

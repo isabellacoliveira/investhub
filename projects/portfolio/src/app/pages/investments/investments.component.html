@@ -1,9 +1,20 @@
 <section class="investments">
-  <h1>📊 Meus Investimentos</h1>
-
-  <div class="card" *ngFor="let investment of investments">
-    <strong>{{ investment.name }}</strong>
-    <span>{{ investment.type }}</span>
-    <p>R$ {{ investment.value }}</p>
+  <h1>📊 Meus Investimentos (Real-time)</h1>
+  <div class="legend">
+    <span>Renda Fixa</span><span class="fixa"></span>
+    <span>Renda Variável</span><span class="var"></span>
+    <span>FII</span><span class="fii"></span>
   </div>
+  <div class="cards">
+    <div class="card" *ngFor="let investment of investments" [class]="investment.type.toLowerCase()">
+      <div class="header">
+        <strong>{{ investment.name }}</strong>
+        <span class="type">{{ investment.type }}</span>
+      </div>
+      <div class="value">R$ {{ investment.value | number:'1.2-2' }}</div>
+      <div class="sparkline" [style.--points]="'0% ' + (investment.value / totalValue * 100) + '%'"></div>
+    </div>
+  </div>
+  <div class="total">Total: R$ {{ totalValue | number:'1.2-2' }}</div>
+  <p>Demo: Valores flutuam automaticamente. Resiliente a falhas.</p>
 </section>

@@ -1,15 +1,15 @@
 <section class="products">
   <h1>🏦 Produtos Financeiros</h1>
-
-  <div
-    class="card"
-    *ngFor="let product of products"
-    [class.inactive]="!product.active"
-  >
+<input [formControl]="filter" placeholder="Filtrar produtos..." class="filter-input">
+  
+  <div class="card" *ngFor="let product of filteredProducts" [class.inactive]="!product.active">
     <strong>{{ product.name }}</strong>
     <p>{{ product.description }}</p>
-
-    <span *ngIf="product.active">Ativo</span>
-    <span *ngIf="!product.active">Indisponível</span>
+    <button (click)="toggleActive(product)" [disabled]="false">
+      {{ product.active ? 'Desativar (Manutenção)' : 'Ativar' }}
+    </button>
+    <span class="status">{{ product.active ? '✅ Ativo' : '🔧 Indisponível' }}</span>
   </div>
+  <p *ngIf="filteredProducts.length === 0">Nenhum produto encontrado.</p>
+  <p>Demo: Clique em "Desativar" para simular outage local.</p>
 </section>

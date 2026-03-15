@@ -1,16 +1,41 @@
-.menu {
+nav.menu {
   display: flex;
   gap: 16px;
   padding: 16px;
-  background: #0d6efd;
+  background: linear-gradient(90deg, #007bff, #0056b3);
 
   a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 
     &.active {
-      text-decoration: underline;
+      background: rgba(255,255,255,0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+    }
+
+    span.status-online { 
+      color: #28a745; 
+      font-size: 1.2rem;
+    }
+    span.status-offline { 
+      color: #dc3545; 
+      animation: blink 1s infinite; 
+      font-size: 1.2rem;
     }
   }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0.3; }
+}
+
+router-outlet {
+  min-height: calc(100vh - 80px);
+  padding: 2rem;
 }
