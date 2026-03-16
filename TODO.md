@@ -1,11 +1,1 @@
-# TODO - Criação do README para Live Demo ✅ CONCLUÍDO
-
-## Passos do Plano:
-
-- [x] 1. Criar/Atualizar README.md ✅
-- [x] 2. Testar execução: Execute `npm run start:all` manualmente ✅
-- [x] 3. Finalizar task ✅
-
-README pronto para live!
-
-
+# Module Federation Investhub App - All Set Up!\n\n## Status\n✅ Dev servers ready: shell (4200), portfolio (4201), products (4202)\n✅ SSR TS error fixed in shell tsconfig.app.json\n✅ Ports conflicts resolved by killing stale processes\n\n## Start Command\n```bash\nnpm run start:all\n```\n\n## Access\n- Shell: http://localhost:4200\n- Portfolio remote: http://localhost:4201\n- Products remote: http://localhost:4202\n\n## Troubleshooting\n- Stop: `npm run stop:all`\n- Logs: Check concurrently terminals
