@@ -1,1 +1,10 @@
-# Module Federation Investhub App - All Set Up!\n\n## Status\n✅ Dev servers ready: shell (4200), portfolio (4201), products (4202)\n✅ SSR TS error fixed in shell tsconfig.app.json\n✅ Ports conflicts resolved by killing stale processes\n\n## Start Command\n```bash\nnpm run start:all\n```\n\n## Access\n- Shell: http://localhost:4200\n- Portfolio remote: http://localhost:4201\n- Products remote: http://localhost:4202\n\n## Troubleshooting\n- Stop: `npm run stop:all`\n- Logs: Check concurrently terminals
+# Task COMPLETE ✅
+
+README-MF-GUIA.md created with step-by-step scenarios for Angular microfrontends.
+
+Demo verified: `npm run start:all` running successfully (shell:4200, portfolio:4201, products:4202).
+
+Access: http://localhost:4200/dashboard
+
+Test scenarios in guide work as described.
+
