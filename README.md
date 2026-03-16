@@ -89,10 +89,7 @@ Ideal para lives/demos: mostra lazy-loading de módulos Angular entre apps indep
 
 ## ⚡ Executando a Demo (Live Ready)
 
-1. **Inicie tudo**:
-   ```
-   npm run start:all
-   ```
+1. **Pare processos antigos** (importante!):\n   ```\n   npm run stop:all\n   ```\n\n2. **Inicie tudo**:\n   ```\n   npm run start:all\n   ```
    - Shell: http://localhost:4200
    - Portfolio: http://localhost:4201
    - Products: http://localhost:4202
